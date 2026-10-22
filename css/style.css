@@ -1,0 +1,544 @@
+/* Reset y configuración base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #2d3748;
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Navegación */
+nav {
+    background-color: white;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 200px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.625rem 1rem;
+    text-decoration: none;
+    color: #2c5aa0;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #ebf4ff;
+    color: #1e3a5f;
+}
+
+nav ul li a:focus {
+    outline: 3px solid #4299e1;
+    outline-offset: 2px;
+    background-color: #ebf4ff;
+    color: #1e3a5f;
+}
+
+/* Main */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Secciones */
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+section header {
+    background: linear-gradient(90deg, #f7fafc 0%, #edf2f7 100%);
+    color: #2d3748;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    box-shadow: none;
+    border-bottom: 2px solid #cbd5e0;
+}
+
+section header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+section article {
+    padding: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+section article:last-child {
+    border-bottom: none;
+}
+
+section article h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c5aa0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+label {
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    padding: 0.625rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    border: 1.5px solid #cbd5e0;
+    border-radius: 6px;
+    background-color: white;
+    color: #2d3748;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+select:hover {
+    border-color: #a0aec0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: 3px solid #4299e1;
+    outline-offset: 2px;
+    border-color: #2c5aa0;
+}
+
+select[multiple] {
+    min-height: 120px;
+    padding: 0.5rem;
+}
+
+select[multiple] option {
+    padding: 0.375rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.125rem 0;
+}
+
+select[multiple] option:checked {
+    background: linear-gradient(#2c5aa0, #2c5aa0);
+    background-color: #2c5aa0;
+    color: white;
+}
+
+/* Botones */
+button {
+    padding: 0.625rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1e3a5f 0%, #152a4a 100%);
+    box-shadow: 0 2px 4px rgba(44, 90, 160, 0.3);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(44, 90, 160, 0.3);
+}
+
+button:focus {
+    outline: 3px solid #4299e1;
+    outline-offset: 2px;
+}
+
+button[type="reset"] {
+    background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+}
+
+button[type="reset"]:hover {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    box-shadow: 0 2px 4px rgba(113, 128, 150, 0.3);
+}
+
+#boton-registrar-venta {
+    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+}
+
+#boton-registrar-venta:hover {
+    background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
+    box-shadow: 0 2px 4px rgba(56, 161, 105, 0.3);
+}
+
+#boton-cancelar-venta {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+}
+
+#boton-cancelar-venta:hover {
+    background: linear-gradient(135deg, #c53030 0%, #9c2626 100%);
+    box-shadow: 0 2px 4px rgba(229, 62, 62, 0.3);
+}
+
+/* Contenedores para tablas con scroll horizontal */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: white;
+}
+
+thead {
+    background: linear-gradient(90deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+thead tr {
+    border-bottom: 2px solid #cbd5e0;
+}
+
+th {
+    padding: 0.75rem 0.625rem;
+    text-align: left;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.15s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 0.625rem;
+    color: #4a5568;
+    vertical-align: top;
+}
+
+/* Área de resumen y total */
+#area-resumen-total {
+    background-color: #f7fafc;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    border: 1.5px solid #cbd5e0;
+    margin-bottom: 1rem;
+}
+
+#area-resumen-total p {
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+#total-venta {
+    color: #2f855a;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Contenedores dinámicos */
+#listado-catalogo,
+#contenedor-historial-ventas,
+#contenedor-detalles-venta {
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1.5px solid #e2e8f0;
+    min-height: 80px;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3748;
+    color: #a0aec0;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Clases para mensajes de error y éxito */
+.error-msg {
+    display: block;
+    color: #c53030;
+    background-color: #fed7d7;
+    border: 2px solid #fc8181;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 0.375rem;
+}
+
+.error-msg::before {
+    content: "⚠ ";
+    font-weight: bold;
+}
+
+.success-msg {
+    display: block;
+    color: #276749;
+    background-color: #c6f6d5;
+    border: 2px solid #68d391;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 0.375rem;
+}
+
+.success-msg::before {
+    content: "✓ ";
+    font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas - 320px */
+@media (max-width: 320px) {
+    body {
+        min-width: 320px;
+    }
+    
+    header h1 {
+        font-size: 1.4rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.375rem;
+    }
+    
+    nav ul li {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    
+    nav ul li a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    
+    section header {
+        padding: 0.75rem;
+    }
+    
+    section header h2 {
+        font-size: 1.25rem;
+    }
+    
+    section article {
+        padding: 0.875rem;
+    }
+    
+    section article h3 {
+        font-size: 1.1rem;
+    }
+    
+    form {
+        max-width: 100%;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+    
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .table-container {
+        margin: 0.75rem -0.875rem 0 -0.875rem;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+    
+    table {
+        min-width: 500px;
+        font-size: 0.85rem;
+    }
+    
+    th,
+    td {
+        padding: 0.5rem 0.375rem;
+    }
+    
+    #area-resumen-total {
+        padding: 0.75rem;
+    }
+    
+    #area-resumen-total p {
+        font-size: 1rem;
+    }
+    
+    #total-venta {
+        font-size: 1.1rem;
+    }
+    
+    footer {
+        padding: 1rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Pantallas medianas a grandes - hasta 1280px */
+@media (min-width: 321px) and (max-width: 1280px) {
+    main {
+        padding: 1rem 0.75rem;
+    }
+    
+    nav ul {
+        gap: 0.375rem;
+    }
+    
+    section article {
+        padding: 1rem;
+    }
+}
+
+/* Pantallas muy grandes - 1280px+ */
+@media (min-width: 1281px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    section header h2 {
+        font-size: 1.75rem;
+    }
+    
+    section article h3 {
+        font-size: 1.4rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+    
+    section article {
+        padding: 1.5rem;
+    }
+}
