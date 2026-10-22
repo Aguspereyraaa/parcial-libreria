@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Librería</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Gestión de Librería</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#libros">Libros</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#ventas">Ventas</a></li>
+            <li><a href="#historial">Historial</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección Catálogo -->
+        <section id="catalogo">
+            <header>
+                <h2>Librería Universitaria</h2>
+            </header>
+
+            <article>
+                <h3>Buscador de Libros</h3>
+                <div>
+                    <label for="buscador-titulo">Buscar por título:</label>
+                    <input type="text" id="buscador-titulo" name="buscador-titulo"
+                        placeholder="Ingrese el título del libro...">
+                </div>
+            </article>
+
+            <article>
+                <h3>Listado de Libros Disponibles</h3>
+                <div id="listado-catalogo">
+                    <!-- Listado dinámico de libros para el catálogo -->
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección Libros -->
+        <section id="libros">
+            <header>
+                <h2>Gestión de Libros</h2>
+            </header>
+
+            <article>
+                <h3>Formulario de Alta de Libros</h3>
+                <form id="form-libros" action="#" method="post">
+                    <div>
+                        <label for="titulo-libro">Título:</label>
+                        <input type="text" id="titulo-libro" name="titulo-libro" required>
+                    </div>
+
+                    <div>
+                        <label for="isbn-libro">ISBN:</label>
+                        <input type="text" id="isbn-libro" name="isbn-libro" required>
+                    </div>
+
+                    <div>
+                        <label for="precio-libro">Precio:</label>
+                        <input type="number" id="precio-libro" name="precio-libro" step="0.01" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="editorial-libro">Editorial:</label>
+                        <select id="editorial-libro" name="editorial-libro" required>
+                            <option value="" disabled selected>Seleccione una editorial</option>
+                            <option value="sudamericana">Sudamericana</option>
+                            <option value="planeta">Planeta</option>
+                            <option value="anagrama">Anagrama</option>
+                            <option value="alfaguara">Alfaguara</option>
+                            <option value="debolsillo">Debolsillo</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="genero-libro">Género:</label>
+                        <select id="genero-libro" name="genero-libro" required>
+                            <option value="" disabled selected>Seleccione un género</option>
+                            <option value="novela">Novela</option>
+                            <option value="ficcion">Ficción</option>
+                            <option value="fantasia">Fantasía</option>
+                            <option value="terror">Terror</option>
+                            <option value="historia">Historia</option>
+                            <option value="policial">Policial</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="autores-libro">Autores (selección múltiple):</label>
+                        <select id="autores-libro" name="autores-libro" multiple size="5" required>
+                            <option value="garcia-marquez">Gabriel García Márquez</option>
+                            <option value="borges">Jorge Luis Borges</option>
+                            <option value="allende">Isabel Allende</option>
+                            <option value="cortazar">Julio Cortázar</option>
+                            <option value="vargas-llosa">Mario Vargas Llosa</option>
+                            <option value="neruda">Pablo Neruda</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button type="submit">Registrar Libro</button>
+                        <button type="reset">Limpiar Formulario</button>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <h3>Libros Registrados</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>ISBN</th>
+                            <th>Precio</th>
+                            <th>Editorial</th>
+                            <th>Género</th>
+                            <th>Autores</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-libros">
+                        <!-- Filas dinámicas de libros registrados -->
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Sección Clientes -->
+        <section id="clientes">
+            <header>
+                <h2>Gestión de Clientes</h2>
+            </header>
+
+            <article>
+                <h3>Formulario de Alta de Clientes</h3>
+                <form id="form-clientes" action="#" method="post">
+                    <div>
+                        <label for="nombre-cliente">Nombre completo:</label>
+                        <input type="text" id="nombre-cliente" name="nombre-cliente" required>
+                    </div>
+
+                    <div>
+                        <label for="email-cliente">Correo electrónico:</label>
+                        <input type="email" id="email-cliente" name="email-cliente" required>
+                    </div>
+
+                    <div>
+                        <button type="submit">Registrar Cliente</button>
+                        <button type="reset">Limpiar Formulario</button>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <h3>Clientes Registrados</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre Completo</th>
+                            <th>Correo Electrónico</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-clientes">
+                        <!-- Filas dinámicas de clientes registrados -->
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Sección Ventas -->
+        <section id="ventas">
+            <header>
+                <h2>Registro de Ventas</h2>
+            </header>
+
+            <article>
+                <h3>Selección de Cliente</h3>
+                <div>
+                    <label for="selector-cliente">Cliente:</label>
+                    <select id="selector-cliente" name="selector-cliente" required>
+                        <option value="" disabled selected>Seleccione un cliente</option>
+                    </select>
+                </div>
+            </article>
+
+            <article>
+                <h3>Agregar Renglones de Venta</h3>
+                <form id="form-renglon-venta" action="#" method="post">
+                    <div>
+                        <label for="selector-libro-venta">Libro:</label>
+                        <select id="selector-libro-venta" name="selector-libro-venta" required>
+                            <option value="" disabled selected>Seleccione un libro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="cantidad-venta">Cantidad:</label>
+                        <input type="number" id="cantidad-venta" name="cantidad-venta" min="1" required>
+                    </div>
+
+                    <div>
+                        <button type="submit">Agregar Renglón</button>
+                    </div>
+                </form>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Libro</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-renglones-venta">
+                        <!-- Filas dinámicas de renglones de venta -->
+                    </tbody>
+                </table>
+            </article>
+
+            <article>
+                <h3>Resumen y Total de la Venta</h3>
+                <div id="area-resumen-total">
+                    <p><strong>Total a pagar:</strong> $ <span id="total-venta">0.00</span></p>
+                </div>
+                <div>
+                    <button type="button" id="boton-registrar-venta">Registrar Venta</button>
+                    <button type="button" id="boton-cancelar-venta">Cancelar Venta</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección Historial -->
+        <section id="historial">
+            <header>
+                <h2>Historial de Ventas</h2>
+            </header>
+
+            <article>
+                <h3>Listado de Ventas Pasadas</h3>
+                <div id="contenedor-historial-ventas">
+                    <!-- Listado dinámico de ventas pasadas -->
+                </div>
+            </article>
+
+            <article>
+                <h3>Detalles de la Venta Seleccionada</h3>
+                <div id="contenedor-detalles-venta">
+                    <p>Seleccione una venta del listado para visualizar sus detalles.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión de Librería - Parcial Universitario</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
